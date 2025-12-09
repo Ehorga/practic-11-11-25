@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'; //E56
 import styles from "./Picture.module.css";
 const Picture = (props) => {
   const { src, alt } = props;
@@ -10,5 +11,10 @@ const Picture = (props) => {
     />
   );
 };
+Picture.propTypes = {
+  scr: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired,
+
+}
 
 export default Picture;
