@@ -1,15 +1,10 @@
-import Gallery from "./components/Gallery/Gallery";
-import ToggleText from "./components/ToggleText/ToggleText";
-import Task from './components/Task/Task';
-
+import TasksList from "./components/TasksList/TasksList";
 
 function App() {
   return (
     <>
-  <Task text = "text for first task" days = "5"/>
- 
+    <TasksList/>
     </>
   );
 }
-
 export default App;
