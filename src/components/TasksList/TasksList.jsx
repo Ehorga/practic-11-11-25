@@ -1,18 +1,18 @@
-import { useState } from 'react';
-import Task from '../Task/Task';
-import tasks from './data';
+import { useState } from "react";
+import Task from "./Task/Task";
+import tasks from "./data";
 
 function TasksList() {
   const [dataTasks, setDataTasks] = useState(tasks);
 
   const setDoneTask = (id) => {
-    const newTasks = dataTasks.map((task)=> {
+    const newTasks =dataTasks.map((task) =>{
       if (task.id === id) {
-        return ({...task, isDone: true})
+        return {...false, isDone: true};
       }
-      return Task
+      return task
     })
-    setDataTasks(newTasks)
+   setDataTasks(newTasks)
   };
 
   return (
