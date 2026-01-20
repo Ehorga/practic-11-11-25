@@ -1,11 +1,21 @@
-import InputText from "./components/InputText/InputText";
-import InputCheckbox from "./components/InputCheckbox/InputCheckbox";
+import RadioMap from "./components/RadioMap/RadioMap";
+
+const transportation = [
+  { label: "Car", value: "car" },
+  { label: "Bicycle", value: "bicycle" },
+  { label: "Bus", value: "bus" },
+  { label: "Train", value: "train" },
+  { label: "Airplane", value: "airplane" },
+  { label: "Boat", value: "boat" },
+  { label: "Motorcycle", value: "motorcycle" },
+  { label: "Tram", value: "tram" },
+  { label: "Subway", value: "subway" },
+  { label: "Scooter", value: "scooter" }
+];
 function App() {
   return (
     <>
-      <InputText />
-      <hr />
-      <InputCheckbox />
+    <RadioMap list={transportation}/>
     </>
   );
 }
