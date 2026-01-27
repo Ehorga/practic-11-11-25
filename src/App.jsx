@@ -1,4 +1,5 @@
 import RadioMap from "./components/RadioMap/RadioMap";
+import Select from "./components/Select/Select";
 
 const transportation = [
   { label: "Car", value: "car" },
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
     <RadioMap list={transportation}/>
+    <Select/>
     </>
   );
 }
