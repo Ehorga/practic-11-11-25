@@ -1,0 +1,47 @@
+@use '/src/common/styles/colors' as *;
+@use '/src/common/styles/widths' as *;
+@use '/src/common/styles/mixins' as *;
+
+@mixin font($size ,$family ,$weight){
+  font: {
+    size: $size;
+    family: $family;
+    weight:$weight;
+  }
+  
+}
+@mixin border($radius){
+  border-radius: $radius;
+  }
+
+.task {
+  width: $width;
+  min-width: $min-width;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: $border-width solid black;
+  padding: 0 $indent;
+  margin: $indent;
+  background-color: $colorBG;
+
+  &:hover {
+    background-color: pink;
+  }
+
+  p:first-child {
+    margin-right: auto;
+    @include font(26px , serif ,600);
+    @include border(8px)
+  }
+
+  button {
+    @include font(20px ,Arial ,900);
+    @include border(50px);
+    margin-left: $indent;
+
+    &:hover {
+      background-color: $colorBG;
+    }
+  }
+}

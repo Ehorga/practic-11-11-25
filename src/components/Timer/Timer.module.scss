@@ -1,0 +1,17 @@
+@use "/src/common/styles/colors" as *;
+.Timer {
+  background-color: $colorBGSecondary;
+  color: $colorTextSecondary;
+  text-align: center;
+  h2{
+    border: 5px solid $colorTextSecondary;
+    padding: 10px;
+  }
+  button {
+    @extend %btn !optional;
+    &:disabled {
+      background-color: $colorBGSecondary;
+    }
+   
+  }
+}

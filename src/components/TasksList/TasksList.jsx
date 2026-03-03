@@ -1,6 +1,7 @@
 import { useState } from "react";
-import Task from "./Task/Task";
+
 import tasks from "./data";
+import Task from './../Task/Task';
 
 function TasksList() {
   const [dataTasks, setDataTasks] = useState(tasks);

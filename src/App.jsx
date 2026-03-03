@@ -1,24 +1,16 @@
-import RadioMap from "./components/RadioMap/RadioMap";
-import Select from "./components/Select/Select";
 
-const transportation = [
-  { label: "Car", value: "car" },
-  { label: "Bicycle", value: "bicycle" },
-  { label: "Bus", value: "bus" },
-  { label: "Train", value: "train" },
-  { label: "Airplane", value: "airplane" },
-  { label: "Boat", value: "boat" },
-  { label: "Motorcycle", value: "motorcycle" },
-  { label: "Tram", value: "tram" },
-  { label: "Subway", value: "subway" },
-  { label: "Scooter", value: "scooter" }
-];
+import DragElement from './components/DragElement/DragElement';
+
+
 function App() {
+
   return (
     <>
-    <RadioMap list={transportation}/>
-    <Select/>
-    </>
+     
+
+     <DragElement/>
+    </> 
   );
 }
+
 export default App;
