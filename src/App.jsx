@@ -1,5 +1,5 @@
 
-import DragElement from './components/DragElement/DragElement';
+import TextAreaAfterSave from './components/TextAreaAfterSave/TextAreaAfterSave';
 
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
     <>
      
 
-     <DragElement/>
+     <TextAreaAfterSave/>
     </> 
   );
 }
