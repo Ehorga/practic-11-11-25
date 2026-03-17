@@ -1,26 +1,22 @@
 import Wrapper from './components/Wrapper/Wrapper'
 import ModalWindow from './components/ModalWindow/ModalWindow';
 import { useState , useEffect } from 'react';
+import DropDownMenu from './components/DropDownMenu/DropDownMenu';
 
 
 function App() {
-const [isOpenModal, setIsOpenModal] = useState(false);
-useEffect(() => {
-  const idTimeOut = setTimeout(()=> {setIsOpenModal(true)} ,2000)
-  return () => {
-    clearTimeout(idTimeOut)
-  };
-}, []);
-const closeModal = ()=>{setIsOpenModal(false)}
+
   return (
-    <>
-    {isOpenModal && (<ModalWindow closeModal={closeModal}>
-      <h3>ModalWindow</h3>
-    </ModalWindow>)}
+  <>
+  
   <Wrapper>
+    <DropDownMenu>
     <h2>hi
-      
     </h2>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Esse explicabo exercitationem totam suscipit?</p>
+    <p>Temporibus veniam rem ullam nulla.</p>
+    </DropDownMenu>
   </Wrapper>
 
      </>
