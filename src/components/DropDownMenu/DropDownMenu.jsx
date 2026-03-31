@@ -1,25 +1,31 @@
-import { useState } from 'react';
-import PropTypes from 'prop-types';
-import styles from "./DropDownMenu.module.scss"
+import { useState } from "react";
+import PropTypes from "prop-types";
+import styles from "./DropDownMenu.module.scss";
 
+const DropdownMenu = (props) => {
+  const { children, text, widthList } = props;
 
-const DropDownMenu = (props) => {
-    const {children} = props;
-    const [isOpen, setIsOpen] = useState(false);
-    const changeIsOpen = ()=> {setIsOpen(!isOpen)}
-    return (
-        <div>
-            <button onClick={changeIsOpen
-            }>text</button>
-            {isOpen && <div className={styles.list}>{children}</div>}
+  const [isOpen, setIsOpen] = useState(false);
+
+  const changeIsOpen = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className={styles.parent}>
+      <button onClick={changeIsOpen}>{text}</button>
+      {isOpen && (
+        <div style = {{width:{widthList}+"px"}} className={styles.list}>
+          {children}
         </div>
-    );
+      )}
+    </div>
+  );
 };
 
-
-DropDownMenu.propTypes = {
-
+DropdownMenu.propTypes = {
+  children: PropTypes.any,
+  text: PropTypes.string,
 };
-
 
 export default DropDownMenu;
