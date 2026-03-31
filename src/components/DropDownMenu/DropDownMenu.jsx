@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import styles from "./DropDownMenu.module.scss";
 
-const DropdownMenu = (props) => {
+const DropDownMenu = (props) => {
   const { children, text, widthList } = props;
 
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const DropdownMenu = (props) => {
   );
 };
 
-DropdownMenu.propTypes = {
+DropDownMenu.propTypes = {
   children: PropTypes.any,
   text: PropTypes.string,
 };
