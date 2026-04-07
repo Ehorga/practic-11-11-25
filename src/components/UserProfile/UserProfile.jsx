@@ -1,19 +1,21 @@
 import PropTypes from "prop-types";
-import { useState, useContext } from "react";
+import { useState, } from "react";
 import Icon from "@mdi/react";
 import { mdiThumbUp, mdiThumbDown } from "@mdi/js";
 import cx from "classnames";
 import styles from "./UserProfile.module.scss";
-import { ThemeContext } from "../../contexts";
+
 import CONSTANTS from "../../constants";
+import {withTheme} from '../HOCs';
+import withUserAccount from './../Header/Header';
 const UserProfile = (props) => {
   const {
-    user: { name = "Anonim", age = 100, email = "anonim@gmail.com" },
+    user: { firstName , lastName}, theme
   } = props;
   const [isSelect, setIsSelect] = useState(false);
   const [amount, setAmount] = useState(0);
   const [isDelete, setIsDelete] = useState(false);
-  const { theme, setTheme } = useContext(ThemeContext);
+//   const { theme, setTheme } = useContext(ThemeContext);
   const changeIsSelect = () => {
     setIsSelect(!isSelect);
   };
@@ -42,7 +44,7 @@ const UserProfile = (props) => {
   return (
     <article className={articleClasses} onClick={changeIsSelect}>
       {" "}
-      <h2>{name}</h2> <p>{age}</p> <p>{email}</p>{" "}
+      <h2>{firstName}</h2> {" "}
       <div>
         {" "}
         <button onClick={addLike}>
@@ -59,11 +61,12 @@ const UserProfile = (props) => {
     </article>
   );
 };
-UserProfile.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string,
-    age: PropTypes.number,
-    email: PropTypes.string,
-  }),
-};
-export default UserProfile;
+// UserProfile.propTypes = {
+//   user: PropTypes.shape({
+//     name: PropTypes.string,
+//     age: PropTypes.number,
+//     email: PropTypes.string,
+//   }),
+//   theme: PropTypes.string,
+// };
+export default withUserAccount(withTheme(UserProfile));
