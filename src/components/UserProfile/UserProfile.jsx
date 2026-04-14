@@ -6,8 +6,8 @@ import cx from "classnames";
 import styles from "./UserProfile.module.scss";
 
 import CONSTANTS from "../../constants";
-import {withTheme} from '../HOCs';
-import withUserAccount from './../Header/Header';
+import {withTheme , withUserAccount} from '../HOCs';
+// import withUserAccount from './../Header/Header';
 const UserProfile = (props) => {
   const {
     user: { firstName , lastName}, theme
