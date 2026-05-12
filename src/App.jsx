@@ -1,4 +1,3 @@
-
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage";
 import { ThemeContext } from "./contexts";
